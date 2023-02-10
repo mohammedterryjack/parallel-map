@@ -13,6 +13,8 @@ def do_something_that_takes_ages(value:int) -> int:
     
 ```
 
+> normal loop:
+
 ```python
 start = time()
 list(map(do_something_that_takes_ages,range(5,0,-1)))
@@ -24,8 +26,10 @@ print(f"duration = {end-start}")
 3 <br />
 2 <br />
 1 <br />
-5,4,3,2,1] <br />
+[5,4,3,2,1] <br />
 duration = 15.025775909423828
+
+> parallel loop:
 
 ```python
 from pmap import parallel_map
