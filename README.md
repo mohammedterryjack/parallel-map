@@ -10,13 +10,14 @@ def do_something_that_takes_ages(value:int) -> int:
     sleep(value)
     print(value)
     return value
-    
+
+example_values = range(5,0,-1)
 ```
 
 > normal loop:
 
 ```python
-list(map(do_something_that_takes_ages,range(5,0,-1)))
+list(map(do_something_that_takes_ages,example_values))
 ```
 5 <br />
 4 <br />
@@ -31,7 +32,7 @@ list(map(do_something_that_takes_ages,range(5,0,-1)))
 ```python
 from pmap import parallel_map
 
-list(parallel_map(do_something_that_takes_ages,range(5,0,-1)))
+list(parallel_map(do_something_that_takes_ages,example_values))
 ```
 1 <br />
 2 <br />
