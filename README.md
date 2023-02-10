@@ -17,7 +17,8 @@ example_values = range(5,0,-1)
 > normal loop:
 
 ```python
-list(map(do_something_that_takes_ages,example_values))
+result = map(do_something_that_takes_ages,example_values)
+list(result)
 ```
 5 <br />
 4 <br />
@@ -32,7 +33,8 @@ list(map(do_something_that_takes_ages,example_values))
 ```python
 from pmap import parallel_map
 
-list(parallel_map(do_something_that_takes_ages,example_values))
+result =parallel_map(do_something_that_takes_ages,example_values)
+list(result)
 ```
 1 <br />
 2 <br />
